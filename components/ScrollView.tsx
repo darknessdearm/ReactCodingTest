@@ -1,14 +1,13 @@
 import type { PropsWithChildren } from "react";
 import { StyleSheet } from "react-native";
 import Animated, {
-    interpolate,
-    useAnimatedRef,
-    useAnimatedStyle,
-    useScrollViewOffset,
+  interpolate,
+  useAnimatedRef,
+  useAnimatedStyle,
+  useScrollViewOffset,
 } from "react-native-reanimated";
 
 import { ThemedView } from "@/components/ThemedView";
-import { useBottomTabOverflow } from "@/components/ui/TabBarBackground";
 
 const HEADER_HEIGHT = 32;
 
@@ -17,7 +16,6 @@ type Props = PropsWithChildren<{}>;
 export default function ScrollView({ children }: Props) {
   const scrollRef = useAnimatedRef<Animated.ScrollView>();
   const scrollOffset = useScrollViewOffset(scrollRef);
-  const bottom = useBottomTabOverflow();
   const headerAnimatedStyle = useAnimatedStyle(() => {
     return {
       transform: [
@@ -41,12 +39,7 @@ export default function ScrollView({ children }: Props) {
 
   return (
     <ThemedView style={styles.container}>
-      <Animated.ScrollView
-        ref={scrollRef}
-        scrollEventThrottle={16}
-        scrollIndicatorInsets={{ bottom }}
-        contentContainerStyle={{ paddingBottom: bottom }}
-      >
+      <Animated.ScrollView ref={scrollRef} scrollEventThrottle={16}>
         <Animated.View
           style={[styles.header, headerAnimatedStyle]}
         ></Animated.View>
@@ -61,7 +54,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   header: {
-    height: HEADER_HEIGHT,
     overflow: "hidden",
   },
   content: {

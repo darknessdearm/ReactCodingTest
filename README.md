@@ -1,6 +1,14 @@
-# Welcome to your Expo app 👋
+# Welcome to the simple To-Do List mobile application 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+
+## About this project
+
+When you started the app, this application is To-do List for checking your task on your hand. the main features will have
+
+1. Task list - showing your current task by default 3 items and you can mark your task on the checkbox to made your task have done.
+2. Add new task - you can add a new task on the list
+3. delete old task - after you have many tasks on the list, you remove or delete a task which you have already done or a incorrect task.
 
 ## Get started
 
@@ -13,7 +21,7 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 2. Start the app
 
    ```bash
-   npx expo start #for mobile
+   npx expo start #by default
    npx expo start --web #for web
    ```
 
