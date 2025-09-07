@@ -8,7 +8,7 @@ When you started the app, this application is To-do List for checking your task 
 
 1. Task list - showing your current task by default 3 items and you can mark your task on the checkbox to made your task have done.
 2. Add new task - you can add a new task on the list
-3. delete old task - after you have many tasks on the list, you remove or delete a task which you have already done or a incorrect task.
+3. Delete old task - after you have many tasks on the list, you remove or delete a task which you have already done or a incorrect task.
 
 ## Get started
 
